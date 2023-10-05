@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const votesForm = document.getElementById('votes-form');
   
     // Fetch characters data from the server
-    fetch('http://localhost:4000/characters')
+    fetch('http://localhost:3000/characters')
       .then(function(resp) {
         return resp.json();
       })
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
           // Add click event listener to show character details
           characterSpan.addEventListener('click', function() {
             // Fetch character details based on character id
-            fetch(`http://localhost:4000/characters/${character.id}`)
+            fetch(`http://localhost:3000/characters/${character.id}`)
               .then(function(resp) {
                 return resp.json();
               })
